@@ -18,7 +18,8 @@ defmodule DoTheCount.Web do
 
   def model do
     quote do
-      use Ecto.Model
+      use Ecto.Schema
+      import Ecto
       @primary_key {:id, :binary_id, autogenerate: true}
       @foreign_key_type :binary_id
     end
@@ -29,7 +30,7 @@ defmodule DoTheCount.Web do
       use Phoenix.Controller
 
       alias DoTheCount.Repo
-      import Ecto.Model
+      import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
 
       import DoTheCount.Router.Helpers
@@ -61,7 +62,7 @@ defmodule DoTheCount.Web do
       use Phoenix.Channel
 
       alias DoTheCount.Repo
-      import Ecto.Model
+      import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
 
     end
