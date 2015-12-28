@@ -3,7 +3,7 @@ defmodule DoTheCount.Repo.Migrations.CreateUser do
 
   def change do
     create table(:users) do
-      add :username, :string, null: false
+      add :name, :string, null: false
       add :email, :string, null: false
       add :balance, :float
       add :password_hash, :string
