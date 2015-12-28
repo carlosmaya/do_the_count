@@ -13,7 +13,7 @@ defmodule DoTheCount.UserController do
   end
 
   def new(conn, _params) do
-    changeset = User.changeset(%User{}, %{})
+    changeset = User.changeset(%User{}, :empty)
     render conn, "new.html", changeset: changeset
   end
 
