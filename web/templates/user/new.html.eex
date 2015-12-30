@@ -6,7 +6,7 @@
       <p>Something went wrong! Check your errors below</p>
       <ul>
         <%= for {attr, message} <- f.errors do %>
-          <li><%= humanize(attr) %> <%= message %></li>
+          <li><%= humanize(attr) %> <%= translate_error(message) %></li>
         <% end %>
       </ul>
     </div>
